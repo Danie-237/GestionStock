@@ -1,5 +1,5 @@
 #  Module : Gestion des Mouvements de Stock
-Ce module permet de gérer les *mouvements de stock* (entrées et sorties) dans le cadre du projet *Gestion de Stock*. 
+Ce module permet de gérer les mouvements de stock (entrées et sorties) dans le cadre du projet Gestion de Stock. 
 Il permet de suivre les modifications de quantité pour chaque produit avec mise à jour automatique des quantités sur MYSQL.
 
 ##  Fichier principal
@@ -10,11 +10,11 @@ Il permet de suivre les modifications de quantité pour chaque produit avec mise
 - Enregistrer les entrées et sorties de stock dans la table mouvements
 - Mettre à jour automatiquement la quantité du produit dans la table produits
 - Vérifier la disponibilité du stock avant d’autoriser une sortie
-- Assurer la cohérence des données avec les *transactions SQL*
+- Assurer la cohérence des données avec les transactions SQL
 
 
 #### Fonctionnalités
-# 1. Ajouter une *entrée de stock*
+# 1. Ajouter une entrée de stock
 
 - L’utilisateur entre :
   - L’ID du produit concerné
@@ -25,7 +25,7 @@ Il permet de suivre les modifications de quantité pour chaque produit avec mise
 
 ---
 
-##  2. Ajouter une *sortie de stock*
+##  2. Ajouter une sortie de stock
 
 - Avant d’autoriser une sortie :
 - Le programme vérifie que la quantité en stock est suffisante
@@ -33,5 +33,5 @@ Il permet de suivre les modifications de quantité pour chaque produit avec mise
 - Sinon, Reduit la quantité :
 - quantite = quantite - valeur
 
-##### 3. MAIN
-- Le main nous permets de faire nous différentes requêtes sur notre interface console. 
+##### MAIN
+Le main nous permet de fair nous différentes requêtes sur notre interface console.
