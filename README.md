@@ -1,7 +1,9 @@
 
 ###### Module : Gestion des Produits
-Il permet de gérer les produits présents dans l’inventaire : ajout, modification, suppression via une interface console.
-Les opérations sont réalisées à l’aide de requêtes SQL via JDBC.
+
+# Objectifs:
+- Permettre à l’utilisateur de gérer les produits présents dans l’inventaire : ajout, modification, suppression via une interface console.
+- Les opérations sont réalisées à l’aide de requêtes SQL via JDBC.
 
 ### Fonctionnalités
 
@@ -14,10 +16,24 @@ Les données sont stockées dans la table "produits" de la base "stock_managemen
 ### Fichier concerné
 
 - "src/GestionProduit.java"
+  
 
-###  Interactions avec les autres modules
+## Aspects techniques
 
- - Le stock via GestionStock.java utilise les produits ajoutés ici.
+- Connexion à MySQL via DatabaseManager.getConnection()
+
+- Gestion des entrées avec Scanner
+
+- Blocs try-with-resources pour éviter les fuites de ressources
+
+- Affichage des messages de succès/erreur dans la console
+
+
+##  Interactions avec les autres modules
+
+ - Ce module est appelé depuis Main.java (options 1, 2, 3)
+
+ - Les produits créés ici sont utilisés dans le module de stock (GestionStock)
 
  - Les mouvements dépendent de l'existence d’un produit (produit_id)
 
