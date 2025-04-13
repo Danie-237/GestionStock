@@ -33,5 +33,5 @@ Il permet de suivre les modifications de quantité pour chaque produit avec mise
 - Sinon, Reduit la quantité :
 - quantite = quantite - valeur
 
-##### MAIN
+##### 3. MAIN
 Le main nous permet de fair nous différentes requêtes sur notre interface console. 
