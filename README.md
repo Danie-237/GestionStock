@@ -35,15 +35,3 @@ Cette étape consiste a connecter notre base de données MySQL créer ici sous M
 - Utilisation de JasperCompileManager, JasperFillManager et JasperExportManager
 - Connexion gérée via DatabaseManager
 
-
-##  Interactions avec les autres modules
-
- - Ce module est appelé depuis Main.java (options 1, 2, 3)
-
- - Les produits créés ici sont utilisés dans le module de stock (GestionStock)
-
- - Les mouvements dépendent de l'existence d’un produit (produit_id)
-
- - Le rapport PDF affiche les produits actuels et leurs quantités (RapportStock.java)
-
-
