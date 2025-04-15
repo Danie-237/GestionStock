@@ -31,6 +31,7 @@ public class Main {
                     break;
                 case 2:
                     GestionProduit.afficherProduit();
+                    break;
                 case 3:
                     GestionProduit.modifierProduit();
                     break;
