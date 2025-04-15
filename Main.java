@@ -13,8 +13,17 @@ public class Main {
             System.out.println("5. Générer un rapport PDF");
             System.out.println("6. Quitter");
             System.out.print("Votre choix : ");
-            int choix = scanner.nextInt();
-            scanner.nextLine(); // Consommer l'entrée
+
+            String choixStr = scanner.nextLine();  // lire comme une chaîne
+            int choix;
+
+            try {
+                choix = Integer.parseInt(choixStr);  // tenter de convertir en int
+            } catch (NumberFormatException e) {
+                System.out.println("Entrée invalide. Veuillez entrer un nombre entre 1 et 6.");
+                continue;
+            }
+
 
             switch (choix) {
                 case 1:
