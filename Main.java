@@ -51,5 +51,5 @@ public class Main {
                     System.out.println("Choix invalide !");
             }
         }
-   }
+    }
 }

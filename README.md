@@ -1,37 +1,37 @@
-#  Module : Gestion des Mouvements de Stock
-Ce module permet de gérer les mouvements de stock (entrées et sorties) dans le cadre du projet Gestion de Stock. 
-Il permet de suivre les modifications de quantité pour chaque produit avec mise à jour automatique des quantités sur MYSQL.
+#####  Module : Génération de Rapport PDF
+
+Ce module génère un rapport PDF de l’état du stock actuel à partir d’un fichier .jrxml via JasperReports.
+
+### Etape 1: Connection de la base de données MySQL a Intellij
+
+Cette étape consiste a connecter notre base de données MySQL créer ici sous MySQL Workbench a Java.
+
+- Creation d'une classe java nommée DatabaseManager avec les attributs permettant la connection a la base de données.
+- Utilisation des bibliothèques java.sql.Connection, java.sql.DriverManager, et java.sql.SQLException. 
+
+### Etape 2: Connection de JasperStudio a MySQL Workbench et generation du rapport
 
 ##  Fichier principal
-- "src/GestionStock.java"
 
-### Objectifs
+- src/RapportStock.java
 
-- Enregistrer les entrées et sorties de stock dans la table mouvements
-- Mettre à jour automatiquement la quantité du produit dans la table produits
-- Vérifier la disponibilité du stock avant d’autoriser une sortie
-- Assurer la cohérence des données avec les transactions SQL
+##  Fonctionnalités
 
+- Compilation du fichier rapport_stock.jrxml
+- Récupération des données via JDBC
+- Export au format Etat_Stock.pdf
 
-#### Fonctionnalités
-# 1. Ajouter une entrée de stock
+##  Dépendances
 
-- L’utilisateur entre :
-  - L’ID du produit concerné
-  - La quantité à ajouter
-  - Le type de mouvement (ENTREE)
-- Le système insère un enregistrement dans mouvements et met à jour la table produits :
-  - quantite = quantite + valeur
+- jasperreports:7.0.2
+- mysql-connector-j-9.2.0
 
----
+ ## Chemin du rapport généré
 
-##  2. Ajouter une sortie de stock
+- src/Etat_Stock.pdf
 
-- Avant d’autoriser une sortie :
-- Le programme vérifie que la quantité en stock est suffisante
-- Si ce n’est pas le cas, un message d’erreur s’affiche et la transaction est annulée
-- Sinon, Reduit la quantité :
-- quantite = quantite - valeur
+##  Infos techniques
 
-##### MAIN
-Le main nous permet de fair nous différentes requêtes sur notre interface console.
+- Utilisation de JasperCompileManager, JasperFillManager et JasperExportManager
+- Connexion gérée via DatabaseManager
+
